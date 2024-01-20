@@ -5,9 +5,83 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url("https://c4.wallpaperflare.com/wallpaper/9/519/764/mountains-best-for-desktop-background-wallpaper-thumb.jpg") no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#header{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  font-size: 4.5em;
+  margin: 30px 50px;
+  color: white;
+}
+
+.note {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: inset -4px -4px 2px rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border: 1.5px solid rgba(255, 255, 255, 0.326);
+  color: #fff;
+  padding: 15px;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  word-wrap: break-word;
+}
+
+.note textarea{
+  background: transparent;
+  color: white;
+  resize: none;
+  border: none;
+}
+
+.notes {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1.4rem;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+}
+
+
+@media screen and (max-width: 900px) {
+  .notes {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+  
+}
+
+@media screen and (max-width: 500px) {
+  .notes {
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+  }
+}
+
+.note_footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.note-save{
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+}
+
+.note-save:hover{
+  transform: scale(1.1);
+  background-color: rgb(153, 153, 236);
+  color: white;
+  transition: .5s;
 }
